@@ -1,0 +1,76 @@
+# vsim -c sc_bench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 18:22:58 on Oct 15,2020
+# //  ModelSim DE 10.7c Aug 17 2018Linux 5.4.0-48-generic
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim DE and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading __work.sc_bench
+# Loading __work.sc_hier
+# Loading __work.clkrst
+# Loading __work.sc
+# Loading __work.dff
+# log -howmany -rec /* 
+# 39
+#  run -all
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# OKAY :: ctr_rst = 0 : out = expected_out = 1
+# OKAY :: ctr_rst = 1 : out = expected_out = 2
+# OKAY :: ctr_rst = 1 : out = expected_out = 0
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# OKAY :: ctr_rst = 0 : out = expected_out = 1
+# OKAY :: ctr_rst = 1 : out = expected_out = 2
+# OKAY :: ctr_rst = 1 : out = expected_out = 0
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# OKAY :: ctr_rst = 1 : out = expected_out = 1
+# OKAY :: ctr_rst = 1 : out = expected_out = 0
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# OKAY :: ctr_rst = 1 : out = expected_out = 1
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# OKAY :: ctr_rst = 0 : out = expected_out = 1
+# OKAY :: ctr_rst = 0 : out = expected_out = 2
+# OKAY :: ctr_rst = 1 : out = expected_out = 3
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# OKAY :: ctr_rst = 0 : out = expected_out = 1
+# OKAY :: ctr_rst = 1 : out = expected_out = 2
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# OKAY :: ctr_rst = 0 : out = expected_out = 1
+# OKAY :: ctr_rst = 0 : out = expected_out = 2
+# OKAY :: ctr_rst = 0 : out = expected_out = 3
+# OKAY :: ctr_rst = 0 : out = expected_out = 4
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 5
+# OKAY :: ctr_rst = 1 : out = expected_out = 5
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# OKAY :: ctr_rst = 0 : out = expected_out = 1
+# OKAY :: ctr_rst = 0 : out = expected_out = 2
+# OKAY :: ctr_rst = 1 : out = expected_out = 3
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# OKAY :: ctr_rst = 1 : out = expected_out = 1
+# OKAY :: ctr_rst = 0 : out = expected_out = 0
+# TEST PASSED
+# ** Note: $finish    : sc_bench.v(31)
+#    Time: 4800 ns  Iteration: 0  Instance: /sc_bench
+# End time: 18:22:58 on Oct 15,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

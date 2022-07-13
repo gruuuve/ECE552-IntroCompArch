@@ -1,0 +1,897 @@
+$date
+	Thu Oct 15 18:22:58 2020
+$end
+$version
+	ModelSim Version 10.7c
+$end
+$timescale
+	1ns
+$end
+
+$scope module sc_bench $end
+$var reg 1 ! ctr_rst $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var wire 1 % err $end
+$var wire 1 & clk $end
+$var wire 1 ' rst $end
+$var reg 4 ( random_gen [3:0] $end
+$var reg 3 ) expected_out [2:0] $end
+$var reg 1 * fail $end
+
+$scope module DUT $end
+$var wire 1 + ctr_rst $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var wire 1 , err $end
+$var wire 1 - clk $end
+$var wire 1 . rst $end
+
+$scope module clk_generator $end
+$var reg 1 / clk $end
+$var reg 1 0 rst $end
+$var wire 1 , err $end
+$var integer 32 1 cycle_count $end
+$upscope $end
+
+$scope module sc0 $end
+$var wire 1 - clk $end
+$var wire 1 . rst $end
+$var wire 1 + ctr_rst $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var reg 1 2 err $end
+$var reg 3 3 reg_in [2:0] $end
+$var wire 1 4 t_rst $end
+
+$scope module ff[2] $end
+$var wire 1 " q $end
+$var wire 1 5 d $end
+$var wire 1 - clk $end
+$var wire 1 4 rst $end
+$var reg 1 6 state $end
+$upscope $end
+
+$scope module ff[1] $end
+$var wire 1 # q $end
+$var wire 1 7 d $end
+$var wire 1 - clk $end
+$var wire 1 4 rst $end
+$var reg 1 8 state $end
+$upscope $end
+
+$scope module ff[0] $end
+$var wire 1 $ q $end
+$var wire 1 9 d $end
+$var wire 1 - clk $end
+$var wire 1 4 rst $end
+$var reg 1 : state $end
+$upscope $end
+$upscope $end
+$upscope $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var wire 1 % err $end
+$var wire 1 & clk $end
+$var wire 1 ' rst $end
+
+$scope module DUT $end
+$var wire 1 + ctr_rst $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var wire 1 , err $end
+$var wire 1 - clk $end
+$var wire 1 . rst $end
+
+$scope module clk_generator $end
+$var wire 1 , err $end
+$upscope $end
+
+$scope module sc0 $end
+$var wire 1 - clk $end
+$var wire 1 . rst $end
+$var wire 1 + ctr_rst $end
+$var wire 1 " out [2] $end
+$var wire 1 # out [1] $end
+$var wire 1 $ out [0] $end
+$var wire 1 4 t_rst $end
+
+$scope module ff[2] $end
+$var wire 1 " q $end
+$var wire 1 5 d $end
+$var wire 1 - clk $end
+$var wire 1 4 rst $end
+$upscope $end
+
+$scope module ff[1] $end
+$var wire 1 # q $end
+$var wire 1 7 d $end
+$var wire 1 - clk $end
+$var wire 1 4 rst $end
+$upscope $end
+
+$scope module ff[0] $end
+$var wire 1 $ q $end
+$var wire 1 9 d $end
+$var wire 1 - clk $end
+$var wire 1 4 rst $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0 (
+b0 )
+0*
+1/
+10
+x2
+bx 3
+0:
+08
+06
+b1 1
+x$
+x#
+x"
+z%
+1&
+1'
+x,
+1-
+1.
+14
+0+
+x9
+x7
+x5
+$end
+#1
+0"
+0#
+0$
+b1 3
+02
+19
+07
+05
+0,
+#50
+0/
+0&
+0-
+#100
+1/
+1&
+1-
+b1111 (
+b10 1
+#150
+0/
+0&
+0-
+#200
+1/
+1&
+1-
+b11 1
+#201
+00
+0.
+04
+0'
+#250
+0/
+0&
+0-
+#300
+1/
+1&
+1-
+1:
+b100 1
+b1 )
+#301
+1$
+b10 3
+09
+17
+#350
+0/
+0&
+0-
+#400
+1/
+1&
+1-
+0:
+18
+b1 (
+1!
+b101 1
+1+
+14
+b10 )
+#401
+1#
+0$
+b11 3
+19
+#450
+0/
+0&
+0-
+#500
+1/
+1&
+1-
+08
+b110 1
+b0 )
+#501
+0#
+b1 3
+07
+#550
+0/
+0&
+0-
+#600
+1/
+1&
+1-
+b1111 (
+0!
+b111 1
+0+
+04
+#650
+0/
+0&
+0-
+#700
+1/
+1&
+1-
+1:
+b0 (
+b1000 1
+b1 )
+#701
+1$
+b10 3
+09
+17
+#750
+0/
+0&
+0-
+#800
+1/
+1&
+1-
+0:
+18
+b1 (
+1!
+b1001 1
+1+
+14
+b10 )
+#801
+1#
+0$
+b11 3
+19
+#850
+0/
+0&
+0-
+#900
+1/
+1&
+1-
+08
+b1010 1
+b0 )
+#901
+0#
+b1 3
+07
+#950
+0/
+0&
+0-
+#1000
+1/
+1&
+1-
+b0 (
+0!
+b1011 1
+0+
+04
+#1050
+0/
+0&
+0-
+#1100
+1/
+1&
+1-
+1:
+b1 (
+1!
+b1100 1
+1+
+14
+b1 )
+#1101
+1$
+b10 3
+09
+17
+#1150
+0/
+0&
+0-
+#1200
+1/
+1&
+1-
+0:
+b1101 1
+b0 )
+#1201
+0$
+b1 3
+19
+07
+#1250
+0/
+0&
+0-
+#1300
+1/
+1&
+1-
+b0 (
+0!
+b1110 1
+0+
+04
+#1350
+0/
+0&
+0-
+#1400
+1/
+1&
+1-
+1:
+b1 (
+1!
+b1111 1
+1+
+14
+b1 )
+#1401
+1$
+b10 3
+09
+17
+#1450
+0/
+0&
+0-
+#1500
+1/
+1&
+1-
+0:
+b0 (
+0!
+b10000 1
+0+
+04
+b0 )
+#1501
+0$
+b1 3
+19
+07
+#1550
+0/
+0&
+0-
+#1600
+1/
+1&
+1-
+1:
+b1111 (
+b10001 1
+b1 )
+#1601
+1$
+b10 3
+09
+17
+#1650
+0/
+0&
+0-
+#1700
+1/
+1&
+1-
+0:
+18
+b0 (
+b10010 1
+b10 )
+#1701
+1#
+0$
+b11 3
+19
+#1750
+0/
+0&
+0-
+#1800
+1/
+1&
+1-
+1:
+b1 (
+1!
+b10011 1
+1+
+14
+b11 )
+#1801
+1$
+b100 3
+09
+07
+15
+#1850
+0/
+0&
+0-
+#1900
+1/
+1&
+1-
+0:
+08
+b1111 (
+0!
+b10100 1
+0+
+04
+b0 )
+#1901
+0#
+0$
+b1 3
+19
+05
+#1950
+0/
+0&
+0-
+#2000
+1/
+1&
+1-
+1:
+b0 (
+b10101 1
+b1 )
+#2001
+1$
+b10 3
+09
+17
+#2050
+0/
+0&
+0-
+#2100
+1/
+1&
+1-
+0:
+18
+b1 (
+1!
+b10110 1
+1+
+14
+b10 )
+#2101
+1#
+0$
+b11 3
+19
+#2150
+0/
+0&
+0-
+#2200
+1/
+1&
+1-
+08
+b0 (
+0!
+b10111 1
+0+
+04
+b0 )
+#2201
+0#
+b1 3
+07
+#2250
+0/
+0&
+0-
+#2300
+1/
+1&
+1-
+1:
+b11000 1
+b1 )
+#2301
+1$
+b10 3
+09
+17
+#2350
+0/
+0&
+0-
+#2400
+1/
+1&
+1-
+0:
+18
+b11001 1
+b10 )
+#2401
+1#
+0$
+b11 3
+19
+#2450
+0/
+0&
+0-
+#2500
+1/
+1&
+1-
+1:
+b1111 (
+b11010 1
+b11 )
+#2501
+1$
+b100 3
+09
+07
+15
+#2550
+0/
+0&
+0-
+#2600
+1/
+1&
+1-
+0:
+08
+16
+b0 (
+b11011 1
+b100 )
+#2601
+1"
+0#
+0$
+b101 3
+19
+#2650
+0/
+0&
+0-
+#2700
+1/
+1&
+1-
+1:
+b1111 (
+b11100 1
+b101 )
+#2701
+1$
+#2750
+0/
+0&
+0-
+#2800
+1/
+1&
+1-
+b11101 1
+#2850
+0/
+0&
+0-
+#2900
+1/
+1&
+1-
+b11110 1
+#2950
+0/
+0&
+0-
+#3000
+1/
+1&
+1-
+b11111 1
+#3050
+0/
+0&
+0-
+#3100
+1/
+1&
+1-
+b0 (
+b100000 1
+#3150
+0/
+0&
+0-
+#3200
+1/
+1&
+1-
+b100001 1
+#3250
+0/
+0&
+0-
+#3300
+1/
+1&
+1-
+b100010 1
+#3350
+0/
+0&
+0-
+#3400
+1/
+1&
+1-
+b100011 1
+#3450
+0/
+0&
+0-
+#3500
+1/
+1&
+1-
+b1111 (
+b100100 1
+#3550
+0/
+0&
+0-
+#3600
+1/
+1&
+1-
+b0 (
+b100101 1
+#3650
+0/
+0&
+0-
+#3700
+1/
+1&
+1-
+b1111 (
+b100110 1
+#3750
+0/
+0&
+0-
+#3800
+1/
+1&
+1-
+b100111 1
+#3850
+0/
+0&
+0-
+#3900
+1/
+1&
+1-
+b101000 1
+#3950
+0/
+0&
+0-
+#4000
+1/
+1&
+1-
+b1 (
+1!
+b101001 1
+1+
+14
+#4050
+0/
+0&
+0-
+#4100
+1/
+1&
+1-
+0:
+06
+b1111 (
+0!
+b101010 1
+0+
+04
+b0 )
+#4101
+0"
+0$
+b1 3
+05
+#4150
+0/
+0&
+0-
+#4200
+1/
+1&
+1-
+1:
+b0 (
+b101011 1
+b1 )
+#4201
+1$
+b10 3
+09
+17
+#4250
+0/
+0&
+0-
+#4300
+1/
+1&
+1-
+0:
+18
+b101100 1
+b10 )
+#4301
+1#
+0$
+b11 3
+19
+#4350
+0/
+0&
+0-
+#4400
+1/
+1&
+1-
+1:
+b1 (
+1!
+b101101 1
+1+
+14
+b11 )
+#4401
+1$
+b100 3
+09
+07
+15
+#4450
+0/
+0&
+0-
+#4500
+1/
+1&
+1-
+0:
+08
+b1111 (
+0!
+b101110 1
+0+
+04
+b0 )
+#4501
+0#
+0$
+b1 3
+19
+05
+#4550
+0/
+0&
+0-
+#4600
+1/
+1&
+1-
+1:
+b1 (
+1!
+b101111 1
+1+
+14
+b1 )
+#4601
+1$
+b10 3
+09
+17
+#4650
+0/
+0&
+0-
+#4700
+1/
+1&
+1-
+0:
+b0 (
+0!
+b110000 1
+0+
+04
+b0 )
+#4701
+0$
+b1 3
+19
+07
+#4750
+0/
+0&
+0-
