@@ -1,0 +1,40 @@
+# Current time # Current time Mon Nov 23 02:22:21 2020
+Mon Nov 23 02:22:21 2020
+# # ModelSimModelSim DE DE Stack Trace
+ Stack Trace
+# Program = # Program = vishvish
+
+# Id = "# Id = "10.7c10.7c"
+"
+# Version = "# Version = "2018.082018.08"
+"
+# Date = "# Date = "Aug 17 2018Aug 17 2018"
+"
+# Platform = "# Platform = "linuxpelinuxpe"
+"
+# Current time Mon Nov 23 02:22:21 2020
+# ModelSim DE Stack Trace
+# Program = vish
+# Id = "10.7c"
+# Version = "2018.08"
+# Date = "Aug 17 2018"
+# Platform = "linuxpe"
+# transcript error: error writing "stdout": I/O error
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": I/O error
+    while executing
+"puts -nonewline stdout $s"
+# transcript error: error writing "stdout": I/O error
+    while executing
+"puts -nonewline stdout $s"
+# Current time Mon Nov 23 16:24:52 2020
+# ModelSim DE Stack Trace
+# Program = vish
+# Id = "10.7c"
+# Version = "2018.08"
+# Date = "Aug 17 2018"
+# Platform = "linuxpe"
+# transcript error: error writing "stdout": I/O error
+    while executing
+"puts -nonewline stdout $s"

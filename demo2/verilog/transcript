@@ -1,0 +1,64 @@
+# vsim -c proc_hier_pbench -lib __work -voptargs="+acc" -wlf dump.wlf -do "log -howmany -rec /* ; run -all" 
+# Start time: 16:40:02 on Nov 23,2020
+# //  ModelSim DE 10.7c Aug 17 2018Linux 5.4.0-54-generic
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim DE and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading __work.proc_hier_pbench
+# Loading __work.proc_hier
+# Loading __work.clkrst
+# Loading __work.proc
+# Loading __work.fetch
+# Loading __work.reg_16
+# Loading __work.memory2c
+# Loading __work.cla_16
+# Loading __work.cla_4
+# Loading __work.fulladder
+# Loading __work.if_id_mod
+# Loading __work.ff_en
+# Loading __work.decode
+# Loading __work.control
+# Loading __work.rf
+# Loading __work.hazard_det
+# Loading __work.id_ex_mod
+# Loading __work.execute
+# Loading __work.s_z_extend
+# Loading __work.alu_B_ctrl
+# Loading __work.alu
+# Loading __work.shifter
+# Loading __work.shift_right
+# Loading __work.shift_left
+# Loading __work.rotate_right
+# Loading __work.rotate_left
+# Loading __work.mux4_1_16
+# Loading __work.quadmux4_1
+# Loading __work.mux4_1
+# Loading __work.mux2_1
+# Loading __work.nand2
+# Loading __work.not1
+# Loading __work.br_ctrl
+# Loading __work.jmp_ctrl
+# Loading __work.mux2_1_16
+# Loading __work.ex_mem_mod
+# Loading __work.memory
+# Loading __work.mem_wb_mod
+# Loading __work.writeBack
+# Loading __work.dff
+# log -howmany -rec /* 
+# 14610
+#  run -all
+# Hello world...simulation starting
+# See verilogsim.log and verilogsim.ptrace for output
+# ** Note: $finish    : proc_hier_pbench.v(115)
+#    Time: 2505 ns  Iteration: 0  Instance: /proc_hier_pbench
+# End time: 16:40:02 on Nov 23,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

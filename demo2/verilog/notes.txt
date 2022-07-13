@@ -1,0 +1,6 @@
+--try using parameterized ff module, might not work w/ format
+
+--Top level modules to edit:
+    -fetch.v
+    -decode.v (control adjustment)
+    -execute.v 
