@@ -1,0 +1,49 @@
+ 
+****************************************
+Report : cell
+Design : fifo
+Version: Q-2019.12-SP3
+Date   : Tue Nov 10 07:40:27 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U10                       NAND3X1         gscl45nm        2.346500  
+U11                       NAND3X1         gscl45nm        2.346500  
+U12                       XNOR2X1         gscl45nm        4.693000  
+U13                       XNOR2X1         gscl45nm        4.693000  
+U14                       XNOR2X1         gscl45nm        4.693000  
+U15                       BUFX2           gscl45nm        2.346500  
+U16                       BUFX2           gscl45nm        2.346500  
+U17                       INVX1           gscl45nm        1.407900  
+U18                       INVX1           gscl45nm        1.407900  
+U19                       INVX1           gscl45nm        1.407900  
+U20                       INVX1           gscl45nm        1.407900  
+U21                       INVX1           gscl45nm        1.407900  
+d_out_mod                 d_out                           874.305887
+                                                                    h
+err_ff                    dff_262                         13.140400 h, n
+fifo0                     reg_16_N_Bits64_3               1319.671572
+                                                                    h, n, p
+fifo1                     reg_16_N_Bits64_2               1319.671572
+                                                                    h, n, p
+fifo2                     reg_16_N_Bits64_1               1321.079472
+                                                                    h, n, p
+fifo3                     reg_16_N_Bits64_0               1319.671572
+                                                                    h, n, p
+rd_ptr                    reg_16_N_Bits3_1                61.947599 h, n, p
+rd_ptr_mod                rd_ptr                          78.373098 h
+wr_en_mod                 wr_enable                       23.464999 h
+wr_ptr                    reg_16_N_Bits3_0                61.947599 h, n, p
+wr_ptr_mod                wr_ptr                          78.373098 h
+--------------------------------------------------------------------------------
+Total 23 cells                                            6502.151368
+1
