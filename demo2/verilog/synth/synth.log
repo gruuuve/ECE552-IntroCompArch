@@ -1,0 +1,1397 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version Q-2019.12-SP3 for linux64 - Apr 21, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+echo "********** CS552 Reading files begin ********************"
+********** CS552 Reading files begin ********************
+set my_verilog_files [list alu_B_ctrl.v alu.v br_ctrl.v cla_16.v cla_4.v control.v decode.v dff.v execute.v ex_mem_mod.v fetch.v ff_en.v fulladder.v hazard_det.v id_ex_mod.v if_id_mod.v jmp_ctrl.v memory2c.syn.v memory.v mem_wb_mod.v mux2_1_16.v mux2_1.v mux4_1_16.v mux4_1.v nand2.v not1.v proc.v quadmux4_1.v reg_16.v rf.v rotate_left.v rotate_right.v shifter.v shift_left.v shift_right.v s_z_extend.v writeBack.v  ]
+alu_B_ctrl.v alu.v br_ctrl.v cla_16.v cla_4.v control.v decode.v dff.v execute.v ex_mem_mod.v fetch.v ff_en.v fulladder.v hazard_det.v id_ex_mod.v if_id_mod.v jmp_ctrl.v memory2c.syn.v memory.v mem_wb_mod.v mux2_1_16.v mux2_1.v mux4_1_16.v mux4_1.v nand2.v not1.v proc.v quadmux4_1.v reg_16.v rf.v rotate_left.v rotate_right.v shifter.v shift_left.v shift_right.v s_z_extend.v writeBack.v
+set my_toplevel proc
+proc
+define_design_lib WORK -path ./WORK
+1
+analyze -f verilog $my_verilog_files
+Running PRESTO HDLC
+Compiling source file ./alu_B_ctrl.v
+Compiling source file ./alu.v
+Compiling source file ./br_ctrl.v
+Compiling source file ./cla_16.v
+Compiling source file ./cla_4.v
+Compiling source file ./control.v
+Compiling source file ./decode.v
+Compiling source file ./dff.v
+Warning:  ./dff.v:15: delays for continuous assignment are ignored. (VER-173)
+Compiling source file ./execute.v
+Compiling source file ./ex_mem_mod.v
+Compiling source file ./fetch.v
+Compiling source file ./ff_en.v
+Compiling source file ./fulladder.v
+Compiling source file ./hazard_det.v
+Compiling source file ./id_ex_mod.v
+Compiling source file ./if_id_mod.v
+Compiling source file ./jmp_ctrl.v
+Compiling source file ./memory2c.syn.v
+Compiling source file ./memory.v
+Warning:  ./memory2c.syn.v:61: The statements in initial blocks are ignored. (VER-281)
+Compiling source file ./mem_wb_mod.v
+Compiling source file ./mux2_1_16.v
+Compiling source file ./mux2_1.v
+Compiling source file ./mux4_1_16.v
+Compiling source file ./mux4_1.v
+Compiling source file ./nand2.v
+Compiling source file ./not1.v
+Compiling source file ./proc.v
+Warning:  ./proc.v:51: the undeclared symbol 'br_stall' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./quadmux4_1.v
+Compiling source file ./reg_16.v
+Compiling source file ./rf.v
+Compiling source file ./rotate_left.v
+Compiling source file ./rotate_right.v
+Compiling source file ./shifter.v
+Compiling source file ./shift_left.v
+Compiling source file ./shift_right.v
+Compiling source file ./s_z_extend.v
+Compiling source file ./writeBack.v
+Presto compilation completed successfully.
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+1
+elaborate $my_toplevel -architecture verilog
+Loading db file '/s/synopsys-2020_06_08/@sys/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/s/synopsys-2020_06_08/@sys/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (proc)
+Elaborated 1 design.
+Current design is now 'proc'.
+Information: Building the design 'fetch'. (HDL-193)
+Presto compilation completed successfully. (fetch)
+Information: Building the design 'if_id_mod'. (HDL-193)
+Presto compilation completed successfully. (if_id_mod)
+Information: Building the design 'decode'. (HDL-193)
+Presto compilation completed successfully. (decode)
+Information: Building the design 'hazard_det'. (HDL-193)
+Presto compilation completed successfully. (hazard_det)
+Information: Building the design 'id_ex_mod'. (HDL-193)
+Presto compilation completed successfully. (id_ex_mod)
+Information: Building the design 'execute'. (HDL-193)
+Presto compilation completed successfully. (execute)
+Information: Building the design 'ex_mem_mod'. (HDL-193)
+Presto compilation completed successfully. (ex_mem_mod)
+Information: Building the design 'memory'. (HDL-193)
+Presto compilation completed successfully. (memory)
+Information: Building the design 'mem_wb_mod'. (HDL-193)
+Presto compilation completed successfully. (mem_wb_mod)
+Information: Building the design 'writeBack'. (HDL-193)
+Presto compilation completed successfully. (writeBack)
+Information: Building the design 'reg_16'. (HDL-193)
+Presto compilation completed successfully. (reg_16)
+Information: Building the design 'memory2c'. (HDL-193)
+
+Inferred memory devices in process
+	in routine memory2c line 71 in file
+		'./memory2c.syn.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  512  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|   memory2c/60    |   64   |    8    |      6       |
+|   memory2c/60    |   64   |    8    |      6       |
+======================================================
+Presto compilation completed successfully. (memory2c)
+Information: Building the design 'cla_16'. (HDL-193)
+Presto compilation completed successfully. (cla_16)
+Information: Building the design 'ff_en' instantiated from design 'if_id_mod' with
+	the parameters "16". (HDL-193)
+Presto compilation completed successfully. (ff_en_WIDTH16)
+Information: Building the design 'control'. (HDL-193)
+Warning:  ./control.v:50: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 37 in file
+	'./control.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            50            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (control)
+Information: Building the design 'rf'. (HDL-193)
+Warning:  ./rf.v:43: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./rf.v:94: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  ./rf.v:147: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 41 in file
+	'./rf.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            43            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 92 in file
+	'./rf.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            94            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 145 in file
+	'./rf.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           147            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine rf line 145 in file
+		'./rf.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     reg_in_reg      | Latch |  128  |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully. (rf)
+Information: Building the design 'ff_en' instantiated from design 'id_ex_mod' with
+	the parameters "5". (HDL-193)
+Presto compilation completed successfully. (ff_en_WIDTH5)
+Information: Building the design 'ff_en' instantiated from design 'id_ex_mod' with
+	the parameters "3". (HDL-193)
+Presto compilation completed successfully. (ff_en_WIDTH3)
+Information: Building the design 'ff_en' instantiated from design 'id_ex_mod' with
+	the parameters "2". (HDL-193)
+Presto compilation completed successfully. (ff_en_WIDTH2)
+Information: Building the design 'ff_en'. (HDL-193)
+Presto compilation completed successfully. (ff_en)
+Information: Building the design 's_z_extend'. (HDL-193)
+Presto compilation completed successfully. (s_z_extend)
+Information: Building the design 'alu_B_ctrl'. (HDL-193)
+Warning:  ./alu_B_ctrl.v:9: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 8 in file
+	'./alu_B_ctrl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            9             |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (alu_B_ctrl)
+Information: Building the design 'alu'. (HDL-193)
+Warning:  ./alu.v:43: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./alu.v:50: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 47 in file
+	'./alu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            50            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (alu)
+Information: Building the design 'br_ctrl'. (HDL-193)
+
+Statistics for case statements in always block at line 12 in file
+	'./br_ctrl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            13            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (br_ctrl)
+Information: Building the design 'jmp_ctrl'. (HDL-193)
+
+Statistics for case statements in always block at line 6 in file
+	'./jmp_ctrl.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            10            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (jmp_ctrl)
+Information: Building the design 'mux4_1_16'. (HDL-193)
+Presto compilation completed successfully. (mux4_1_16)
+Information: Building the design 'quadmux4_1'. (HDL-193)
+Presto compilation completed successfully. (quadmux4_1)
+Information: Building the design 'mux2_1_16'. (HDL-193)
+Presto compilation completed successfully. (mux2_1_16)
+Information: Building the design 'dff'. (HDL-193)
+
+Inferred memory devices in process
+	in routine dff line 17 in file
+		'./dff.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dff)
+Information: Building the design 'mux2_1'. (HDL-193)
+Presto compilation completed successfully. (mux2_1)
+Information: Building the design 'cla_4'. (HDL-193)
+Presto compilation completed successfully. (cla_4)
+Information: Building the design 'shifter'. (HDL-193)
+Warning:  ./shifter.v:43: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 42 in file
+	'./shifter.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            43            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (shifter)
+Information: Building the design 'mux4_1'. (HDL-193)
+Presto compilation completed successfully. (mux4_1)
+Information: Building the design 'fulladder'. (HDL-193)
+Presto compilation completed successfully. (fulladder)
+Information: Building the design 'nand2'. (HDL-193)
+Presto compilation completed successfully. (nand2)
+Information: Building the design 'not1'. (HDL-193)
+Presto compilation completed successfully. (not1)
+Information: Building the design 'shift_right'. (HDL-193)
+Presto compilation completed successfully. (shift_right)
+Information: Building the design 'shift_left'. (HDL-193)
+Presto compilation completed successfully. (shift_left)
+Information: Building the design 'rotate_right'. (HDL-193)
+Presto compilation completed successfully. (rotate_right)
+Information: Building the design 'rotate_left'. (HDL-193)
+Presto compilation completed successfully. (rotate_left)
+1
+echo "********** CS552 Reading files end ********************"
+********** CS552 Reading files end ********************
+current_design proc
+Current design is 'proc'.
+{proc}
+#/* The name of the clock pin. If no clock-pin     */
+#/* exists, pick anything                          */
+set my_clock_pin clk
+clk
+#/* Target frequency in MHz for optimization       */
+set my_clk_freq_MHz 1000
+1000
+#/* Delay of input signals (Clock-to-Q, Package etc.)  */
+set my_input_delay_ns 0.1
+0.1
+#/* Reserved time for output signals (Holdtime etc.)   */
+set my_output_delay_ns 0.1
+0.1
+#/**************************************************/
+#/* No modifications needed below                  */
+#/**************************************************/
+set verilogout_show_unconnected_pins "true"
+true
+# analyze -f verilog $my_verilog_files
+# elaborate $my_toplevel -architecture verilog
+# current_design $my_toplevel
+report_hierarchy 
+ 
+****************************************
+Report : hierarchy
+Design : proc
+Version: Q-2019.12-SP3
+Date   : Mon Nov 23 08:10:02 2020
+****************************************
+
+Information: This design contains unmapped logic. (RPT-7)
+
+proc
+    GTECH_OR2                                      gtech
+    decode
+        GTECH_OR2                                  gtech
+        control
+            GTECH_AND2                             gtech
+            GTECH_BUF                              gtech
+            GTECH_NOT                              gtech
+            GTECH_OR2                              gtech
+        rf
+            GTECH_AND2                             gtech
+            GTECH_BUF                              gtech
+            GTECH_NOT                              gtech
+            GTECH_OR2                              gtech
+            reg_16
+                dff
+                    GTECH_BUF                      gtech
+                    GTECH_NOT                      gtech
+                mux2_1
+                    nand2
+                        GTECH_AND2                 gtech
+                        GTECH_NOT                  gtech
+                    not1
+                        GTECH_NOT                  gtech
+    ex_mem_mod
+        ff_en
+            dff
+                ...
+            mux2_1
+                ...
+        ff_en_WIDTH3
+            dff
+                ...
+            mux2_1
+                ...
+        ff_en_WIDTH5
+            dff
+                ...
+            mux2_1
+                ...
+        ff_en_WIDTH16
+            dff
+                ...
+            mux2_1
+                ...
+    execute
+        GTECH_OR2                                  gtech
+        alu
+            GTECH_AND2                             gtech
+            GTECH_BUF                              gtech
+            GTECH_NOT                              gtech
+            GTECH_OR2                              gtech
+            GTECH_XOR2                             gtech
+            cla_16
+                GTECH_AND2                         gtech
+                GTECH_OR2                          gtech
+                cla_4
+                    GTECH_AND2                     gtech
+                    GTECH_OR2                      gtech
+                    GTECH_XOR2                     gtech
+                    fulladder
+                        GTECH_AND2                 gtech
+                        GTECH_OR2                  gtech
+                        GTECH_XOR2                 gtech
+            mux4_1_16
+                quadmux4_1
+                    mux4_1
+                        mux2_1
+                            ...
+            shifter
+                GTECH_AND2                         gtech
+                GTECH_BUF                          gtech
+                GTECH_NOT                          gtech
+                GTECH_OR2                          gtech
+                rotate_left
+                    GTECH_BUF                      gtech
+                    GTECH_NOT                      gtech
+                rotate_right
+                    GTECH_BUF                      gtech
+                    GTECH_NOT                      gtech
+                shift_left
+                    GTECH_BUF                      gtech
+                    GTECH_NOT                      gtech
+                shift_right
+                    GTECH_BUF                      gtech
+                    GTECH_NOT                      gtech
+        alu_B_ctrl
+            GTECH_AND2                             gtech
+            GTECH_BUF                              gtech
+            GTECH_NOT                              gtech
+            GTECH_OR2                              gtech
+        br_ctrl
+            GTECH_AND2                             gtech
+            GTECH_BUF                              gtech
+            GTECH_NOT                              gtech
+            GTECH_OR2                              gtech
+        cla_16
+            ...
+        jmp_ctrl
+            GTECH_AND2                             gtech
+            GTECH_BUF                              gtech
+            GTECH_NOT                              gtech
+            GTECH_OR2                              gtech
+        mux2_1_16
+            mux2_1
+                ...
+        mux4_1_16
+            ...
+        quadmux4_1
+            ...
+        s_z_extend
+    fetch
+        GTECH_BUF                                  gtech
+        GTECH_NOT                                  gtech
+        GTECH_OR2                                  gtech
+        cla_16
+            ...
+        memory2c
+            GTECH_AND2                             gtech
+            GTECH_BUF                              gtech
+            GTECH_NOT                              gtech
+            GTECH_OR2                              gtech
+        reg_16
+            ...
+    hazard_det
+        GTECH_AND2                                 gtech
+        GTECH_BUF                                  gtech
+        GTECH_NOT                                  gtech
+        GTECH_OR2                                  gtech
+    id_ex_mod
+        GTECH_BUF                                  gtech
+        GTECH_NOT                                  gtech
+        ff_en
+            ...
+        ff_en_WIDTH2
+            dff
+                ...
+            mux2_1
+                ...
+        ff_en_WIDTH3
+            ...
+        ff_en_WIDTH5
+            ...
+        ff_en_WIDTH16
+            ...
+    if_id_mod
+        GTECH_BUF                                  gtech
+        GTECH_NOT                                  gtech
+        ff_en_WIDTH16
+            ...
+    mem_wb_mod
+        ff_en
+            ...
+        ff_en_WIDTH3
+            ...
+        ff_en_WIDTH5
+            ...
+        ff_en_WIDTH16
+            ...
+    memory
+        GTECH_OR2                                  gtech
+        memory2c
+            ...
+    writeBack
+        mux4_1_16
+            ...
+1
+link
+
+  Linking design 'proc'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  gscl45nm (library)          /u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db
+
+1
+uniquify
+Information: Uniquified 9 instances of design 'reg_16'. (OPT-1056)
+Information: Uniquified 2 instances of design 'memory2c'. (OPT-1056)
+Information: Uniquified 4 instances of design 'cla_16'. (OPT-1056)
+Information: Uniquified 14 instances of design 'ff_en_WIDTH16'. (OPT-1056)
+Information: Uniquified 3 instances of design 'ff_en_WIDTH5'. (OPT-1056)
+Information: Uniquified 3 instances of design 'ff_en_WIDTH3'. (OPT-1056)
+Information: Uniquified 18 instances of design 'ff_en'. (OPT-1056)
+Information: Uniquified 3 instances of design 'mux4_1_16'. (OPT-1056)
+Information: Uniquified 13 instances of design 'quadmux4_1'. (OPT-1056)
+Information: Uniquified 412 instances of design 'dff'. (OPT-1056)
+Information: Uniquified 584 instances of design 'mux2_1'. (OPT-1056)
+Information: Uniquified 16 instances of design 'cla_4'. (OPT-1056)
+Information: Uniquified 52 instances of design 'mux4_1'. (OPT-1056)
+Information: Uniquified 64 instances of design 'fulladder'. (OPT-1056)
+Information: Uniquified 1752 instances of design 'nand2'. (OPT-1056)
+Information: Uniquified 584 instances of design 'not1'. (OPT-1056)
+1
+set my_period [expr 1000 / $my_clk_freq_MHz]
+1
+set find_clock [ find port [list $my_clock_pin] ]
+{clk}
+if {  $find_clock != [list] } {
+   set clk_name $my_clock_pin
+   create_clock -period $my_period $clk_name
+} else {
+   set clk_name vclk
+   create_clock -period $my_period -name $clk_name
+} 
+1
+set_driving_cell  -lib_cell INVX1  [all_inputs]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all_inputs] $my_clock_pin]
+1
+set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
+1
+compile 
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'proc'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 323 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'nand2_144'
+  Processing 'not1_48'
+  Processing 'mux2_1_49'
+  Processing 'mux4_1_17'
+  Processing 'quadmux4_1_4'
+  Processing 'mux4_1_16_1'
+  Processing 'writeBack'
+  Processing 'dff_175'
+  Processing 'ff_en_WIDTH5_0'
+  Processing 'ff_en_0'
+  Processing 'ff_en_WIDTH3_0'
+  Processing 'ff_en_WIDTH16_0'
+  Processing 'mem_wb_mod'
+  Processing 'memory2c_0'
+  Processing 'memory'
+  Processing 'ex_mem_mod'
+  Processing 'mux2_1_16'
+  Processing 'fulladder_16'
+  Processing 'cla_4_4'
+  Processing 'cla_16_1'
+  Processing 'quadmux4_1_12'
+  Processing 'jmp_ctrl'
+  Processing 'br_ctrl'
+  Processing 'rotate_left'
+  Processing 'rotate_right'
+  Processing 'shift_left'
+  Processing 'shift_right'
+  Processing 'shifter'
+  Processing 'alu'
+  Processing 'alu_B_ctrl'
+  Processing 's_z_extend'
+  Processing 'execute'
+  Processing 'ff_en_WIDTH2'
+  Processing 'id_ex_mod'
+  Processing 'hazard_det'
+  Processing 'reg_16_0'
+  Processing 'rf'
+  Processing 'control'
+  Processing 'decode'
+  Processing 'mux2_1_584'
+  Processing 'ff_en_WIDTH16_12'
+  Processing 'if_id_mod'
+  Processing 'reg_16_8'
+  Processing 'fetch'
+  Processing 'proc'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'memory2c_0_DW01_inc_0'
+  Processing 'memory2c_1_DW01_inc_0_DW01_inc_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:15   41251.0      1.81      93.6      30.6                          
+    0:00:15   41251.0      1.81      93.6      30.6                          
+    0:00:15   41367.4      1.63      52.6      30.4                          
+    0:00:15   41483.8      1.63      42.8      30.4                          
+    0:00:15   41626.0      1.41      35.6      30.4                          
+    0:00:15   42326.6      1.41      35.6      30.4                          
+    0:00:16   42531.3      1.22      32.3      30.2                          
+    0:00:16   42701.6      1.22      32.3      30.2                          
+    0:00:16   42831.1      1.22      32.3      30.2                          
+    0:00:18   44737.9      0.79      21.0      24.0                          
+    0:00:18   44737.9      0.79      21.0      24.0                          
+    0:00:18   44737.9      0.79      21.0      24.0                          
+    0:00:18   44736.5      0.79      21.0      24.0                          
+    0:00:18   44736.5      0.79      21.0      24.0                          
+    0:00:20   41755.0      0.67      15.8      22.6                          
+    0:00:21   41763.9      0.65      14.9      22.6                          
+    0:00:22   41770.0      0.64      14.4      22.6                          
+    0:00:22   41775.2      0.64      14.1      22.6                          
+    0:00:22   41779.9      0.63      13.7      22.6                          
+    0:00:22   41782.7      0.62      13.5      22.6                          
+    0:00:22   41786.0      0.62      13.4      22.6                          
+    0:00:22   41786.5      0.62      13.4      22.6                          
+    0:00:23   41786.0      0.62      13.4      22.6                          
+    0:00:23   41786.0      0.62      13.4      22.6                          
+    0:00:23   41786.0      0.62      13.4      22.6                          
+    0:00:28   42355.3      0.77      16.5      19.5                          
+    0:00:33   42789.8      0.89      17.9      16.5                          
+    0:00:39   42897.3      0.89      17.8      16.4                          
+    0:00:44   42960.2      0.89      17.8      16.4                          
+    0:00:46   42988.3      0.89      17.8      16.4                          
+    0:00:46   43007.1      0.89      17.8      16.3                          
+    0:00:46   43033.4      0.89      17.8      16.3                          
+    0:00:46   43059.7      0.89      17.8      16.2                          
+    0:00:46   43086.0      0.89      17.8      16.2                          
+    0:00:46   43086.0      0.89      17.8      16.2                          
+    0:00:46   43086.9      0.87      17.5      16.2 ex/alu/cla/cla1/net32457 
+    0:00:47   43087.8      0.87      17.5      16.2 ex/alu/cla/cla1/net32471 
+    0:00:47   43090.2      0.82      16.4      16.2 ex/B_ctrl/net32662       
+    0:00:50   43090.7      0.81      16.4      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:50   43098.2      0.72      14.9      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:50   43090.2      0.69      14.6      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:50   43090.2      0.69      14.6      16.2                          
+    0:00:51   43095.3      0.64      13.6      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43103.8      0.62      13.2      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43127.7      0.60      13.1      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43129.6      0.58      12.9      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43143.2      0.57      12.7      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43162.5      0.55      12.4      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43169.0      0.55      12.4      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43160.1      0.55      12.3      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43166.2      0.54      12.3      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43175.6      0.51      11.8      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43186.4      0.50      11.6      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43193.9      0.50      11.5      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:51   43191.6      0.50      11.4      16.2 ft/pc_reg/ff0[15]/state_reg/D
+    0:00:51   43221.1      0.49       9.9      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:52   43236.1      0.48       9.9      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:52   43246.9      0.47       9.6      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:52   43254.0      0.47       9.6      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:52   43267.6      0.47       9.6      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:52   43271.3      0.46       9.5      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:52   43273.7      0.46       9.5      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:52   43287.8      0.46       9.4      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:52   43291.5      0.45       9.4      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:52   43294.3      0.45       9.3      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:52   43295.7      0.45       9.3      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:52   43298.1      0.45       9.3      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:52   43300.4      0.45       9.3      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:52   43295.7      0.44       9.2      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:52   43300.9      0.44       9.2      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:52   43300.0      0.44       9.2      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:52   43296.2      0.44       9.2      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:52   43297.6      0.44       9.2      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:53   43298.6      0.43       9.2      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:53   43301.8      0.43       9.1      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:53   43306.5      0.43       9.1      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:53   43307.5      0.42       9.1      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:53   43314.5      0.42       9.0      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:53   43320.1      0.42       9.0      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:53   43322.5      0.42       9.0      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:53   43332.3      0.41       9.0      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:53   43345.5      0.40       8.9      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:53   43350.2      0.40       8.8      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:53   43357.2      0.40       8.8      16.2 ft/pc_reg/ff0[15]/state_reg/D
+    0:00:53   43358.6      0.39       8.8      16.2 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:00:53   43361.0      0.39       8.8      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:53   43374.1      0.38       8.8      16.2 ft/pc_reg/ff0[15]/state_reg/D
+    0:00:53   43384.9      0.38       8.7      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:54   43391.5      0.38       8.7      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:54   43396.2      0.37       8.7      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:54   43399.0      0.37       8.7      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:54   43401.3      0.37       8.7      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:54   43408.4      0.37       8.7      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:54   43412.6      0.37       8.6      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:54   43411.2      0.37       8.6      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:54   43414.9      0.37       8.6      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:54   43418.7      0.36       8.6      16.2 ex_mem_ff/ff1/ffs[15]/state_reg/D
+    0:00:54   43426.2      0.36       8.5      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:54   43422.9      0.36       8.5      16.2 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:55   43487.7      0.33       8.1      16.1 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:00:55   43487.7      0.33       8.1      16.1                          
+    0:00:55   43487.7      0.33       8.1      16.1                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:55   43487.7      0.33       8.1      16.1                          
+    0:00:55   43498.0      0.33       8.1      16.0 id/control/net32785      
+    0:00:55   43590.5      0.33       8.1      15.8 ex/alu/shift/rotl/n12    
+    0:00:55   43666.5      0.33       8.1      15.6 ex/alu/shift/shftr/n21   
+    0:00:55   43709.7      0.33       8.0      15.5 ex/alu/shift/shftr/n29   
+    0:00:55   43728.0      0.33       8.0      15.5 ex/alu/shift/shftr/n26   
+    0:00:55   43781.0      0.33       8.0      15.5 ex/alu/cla/cla0/net32518 
+    0:00:56   43853.7      0.33       8.0      15.4 ex/alu/shift/shftr/n27   
+    0:00:56   43916.6      0.33       8.0      15.4 mem/data_mem/n119        
+    0:00:56   44056.9      0.33       8.0      15.3 ex/alu/cla/cla1/net32455 
+    0:00:56   44121.2      0.33       8.0      15.2 mem/data_mem/n1076       
+    0:00:56   44165.8      0.33       8.0      15.2 ex/alu/U4/net32325       
+    0:00:56   44256.9      0.33       8.0      15.1 ex/alu/cla/cla0/net32522 
+    0:00:56   44324.0      0.33       7.9      15.1 ex/alu/shift/shftr/n49   
+    0:00:56   44495.7      0.33       7.9      15.0 mem/data_mem/C2243/net14038
+    0:00:56   44660.5      0.33       7.9      14.9 ft/instrMem/C2243/net14038
+    0:00:56   44825.2      0.33       7.9      14.8 ft/instrMem/C2242/net15636
+    0:00:56   44911.5      0.33       7.9      14.7 ex/alu/U4/net32206       
+    0:00:56   44928.0      0.33       7.9      14.7 ex/alu/mux1/m3/m1/mux3/na3/out
+    0:00:57   45078.6      0.33       7.9      14.6 mem/data_mem/C2242/net15634
+    0:00:57   45243.3      0.33       7.9      14.5 ft/instrMem/C2242/net15312
+    0:00:57   45343.8      0.33       7.9      14.4 ex/alu/U4/net32154       
+    0:00:57   45472.8      0.33       7.9      14.4 ft/instrMem/C2243/net14076
+    0:00:57   45607.0      0.33       7.9      14.4 mem/data_mem/C2243/net14293
+    0:00:57   45744.1      0.33       7.9      14.4 ft/instrMem/C2242/net14998
+    0:00:57   45810.2      0.33       7.9      14.3 ex/alu/cla/cla0/net32523 
+    0:00:57   45824.8      0.33       7.9      14.3 ex/alu/U4/net32223       
+    0:00:57   45897.1      0.33       7.9      14.3 ft/instrMem/C2243/net13761
+    0:00:57   45977.3      0.33       7.9      14.3 ft/instrMem/C2243/net13762
+    0:00:57   46036.9      0.33       7.9      14.3 ex/alu/mux1/m0/m3/mux3/na3/out
+    0:00:57   46145.8      0.33       7.9      14.2 ex/alu/mux1/m2/m0/mux1/na2/out
+    0:00:57   46174.9      0.33       7.9      14.2 ex/br_mux/m0/m3/mux1/na2/out
+    0:00:57   46285.7      0.33       7.9      14.2 mem_wb_ff/ff5/mux[2]/na2/out
+    0:00:58   46323.2      0.33       7.9      14.1 if_id_ff/ff2/mux[5]/na2/out
+    0:00:58   46351.4      0.33       7.9      14.1 ex_mem_ff/ff3/mux[8]/na2/out
+    0:00:58   46444.7      0.33       7.9      14.1 id_ex_ff/ff1/mux[14]/na2/out
+    0:00:58   46518.4      0.33       7.9      14.0 ex/alu/shift/rotr/Out<9> 
+    0:01:01   46562.5      0.33       7.9      13.8 mem/data_mem/C2242/net15016
+    0:01:01   46608.5      0.33       7.9      13.2 ex/alu/shift/n57         
+    0:01:01   46613.2      0.33       7.9      13.2 ex/alu/cla/cla0/net32508 
+    0:01:01   46616.0      0.33       7.9      13.2 hd/net32720              
+    0:01:02   46610.9      0.33       7.9      13.2 ex/alu/shift/net43409    
+    0:01:02   46605.2      0.33       7.9      13.2 mem_wb_ff/ff10/mux[3]/na2/out
+    0:01:02   46610.4      0.33       7.9      13.1 ex/alu/shift/rotr/Out<8> 
+    0:01:02   46684.6      0.33       7.9      13.1 ex/alu/shift/rotr/n89    
+    0:01:02   46776.1      0.33       7.9      13.1 ex/alu/shift/n41         
+    0:01:03   46794.4      0.33       7.9      13.1 ft/instrMem/n93          
+    0:01:04   46933.8      0.33       7.9      13.1 ft/instrMem/n166         
+    0:01:04   47073.1      0.33       7.9      13.1 ft/instrMem/n235         
+    0:01:04   47212.5      0.33       7.9      13.1 ft/instrMem/n304         
+    0:01:04   47351.9      0.33       7.9      13.1 ft/instrMem/n376         
+    0:01:04   47491.3      0.33       7.9      13.0 ft/instrMem/n442         
+    0:01:04   47630.7      0.33       7.9      13.0 ft/instrMem/n511         
+    0:01:04   47770.0      0.33       7.9      13.0 ft/instrMem/n580         
+    0:01:04   47909.4      0.33       7.9      13.0 ft/instrMem/n648         
+    0:01:04   48048.8      0.33       7.9      13.0 ft/instrMem/n718         
+    0:01:04   48188.2      0.33       7.9      13.0 ft/instrMem/n784         
+    0:01:04   48327.6      0.33       7.9      13.0 ft/instrMem/n852         
+    0:01:04   48467.0      0.33       7.9      12.9 ft/instrMem/n922         
+    0:01:04   48606.3      0.33       7.9      12.9 ft/instrMem/n990         
+    0:01:04   48745.7      0.33       7.9      12.9 ft/instrMem/n1057        
+    0:01:05   48885.1      0.33       7.9      12.9 ft/instrMem/n1140        
+    0:01:05   49024.5      0.33       7.9      12.9 ft/instrMem/n1206        
+    0:01:05   49163.9      0.33       7.9      12.9 ft/instrMem/n1276        
+    0:01:05   49303.2      0.33       7.9      12.8 ft/instrMem/n1342        
+    0:01:05   49414.9      0.33       7.9      12.8 id_ex_ff/ff9/mux[0]/na1/out
+    0:01:05   49590.9      0.33       7.9      12.7 ex/alu/mux1/m2/m3/mux2/na1/out
+    0:01:05   49758.0      0.33       7.9      12.7 wr_b/wr_b_mux/m1/m2/mux2/na1/out
+    0:01:05   49882.8      0.33       7.9      12.6 ex/br_mux/m2/m0/mux2/na1/out
+    0:01:05   49970.6      0.33       7.8      12.6 ex_mem_ff/ff6/mux[1]/na1/out
+    0:01:05   50080.9      0.33       7.8      12.5 id/rf/reg0/mux[4]/na1/out
+    0:01:05   50278.0      0.33       7.8      12.4 id/rf/reg2/mux[14]/na1/out
+    0:01:05   50475.1      0.33       7.8      12.4 id/rf/reg5/mux[8]/na1/out
+    0:01:05   50672.2      0.33       7.8      12.3 if_id_ff/ff0/mux[2]/na1/out
+    0:01:05   50738.8      0.33       7.8      12.2 mem_wb_ff/ff3/mux[0]/na1/out
+    0:01:06   50798.9      0.33       7.8      12.2 ex_mem_ff/ff3/mux[0]/na1/out
+    0:01:06   50870.2      0.33       7.8      12.2 id_ex_ff/ff1/mux[6]/na1/out
+    0:01:06   51079.1      0.33       7.8      12.1 ex/mux4/mux[0]/na1/out   
+    0:01:06   51143.4      0.33       7.9      12.1 ex/alu/cla/cla2/net32406 
+    0:01:06   51201.1      0.33       7.8      12.0 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:01:06   51199.7      0.33       7.8      12.0 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:01:06   51201.1      0.33       7.8      12.0 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:01:06   51202.0      0.33       7.8      12.0 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:01:07   51209.5      0.33       7.8      12.0 ex_mem_ff/ff1/ffs[14]/state_reg/D
+    0:01:07   51238.2      0.32       7.8      12.0 ex/alu/B<11>             
+    0:01:07   51242.9      0.32       7.8      12.0 ex/alu/shifted<1>        
+    0:01:07   51257.9      0.32       7.8      12.0 ft/instrMem/n1129        
+    0:01:07   51260.2      0.32       7.8      12.0 ex/add1/cla0/net32118    
+    0:01:08   51260.2      0.32       7.8      12.0 ex/add1/cla0/net32123    
+    0:01:08   51268.2      0.32       7.8      12.0 ex/B_ctrl/net32661       
+    0:01:08   51267.3      0.32       7.8      12.0 id/control/ab<3>         
+    0:01:08   51266.8      0.32       7.8      12.0 mem/data_mem/C2242/net14995
+    0:01:08   51269.1      0.32       7.8      12.0 mem_wb_ff/ff7/mux[0]/w2  
+    0:01:08   51370.0      0.32       7.7      11.9 ex/wr_reg_mux/m1/mux1/na3/in2
+    0:01:09   51478.0      0.32       7.7      11.9 id/rf/reg1/mux[8]/w2     
+    0:01:09   51609.4      0.32       7.7      11.9 id/rf/reg5/mux[0]/w2     
+    0:01:09   51740.8      0.32       7.7      11.8 if_id_ff/ff0/mux[8]/w2   
+    0:01:09   51872.2      0.32       7.7      11.8 mem_wb_ff/ff3/mux[11]/w2 
+    0:01:09   52003.6      0.32       7.7      11.8 ex_mem_ff/ff3/mux[5]/w2  
+    0:01:09   52097.9      0.32       7.7      11.8 ex/alu/shift/shftr/n76   
+    0:01:11   52108.7      0.32       7.7      11.8 mem_wb_ff/ff7/mux[0]/w1  
+    0:01:11   52166.0      0.32       7.7      11.7 mem_wb_ff/ff10/mux[0]/w1 
+    0:01:11   52199.3      0.32       7.7      11.7 mem_wb_ff/ff1/mux[8]/w1  
+    0:01:11   52293.2      0.32       7.7      11.7 ex_mem_ff/ff1/mux[14]/w2 
+    0:01:11   52351.8      0.32       7.7      11.7 id_ex_ff/ff4/mux[7]/w1   
+    0:01:13   52367.3      0.32       7.7      11.7 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:01:14   52369.7      0.32       7.7      11.7 ex_mem_ff/ff1/ffs[9]/state_reg/D
+    0:01:14   52372.5      0.32       7.7      11.7 ex_mem_ff/ff1/ffs[9]/state_reg/D
+    0:01:14   52370.1      0.32       7.7      11.7 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:01:15   52372.5      0.35       8.1      11.7 ex/alu/cla/cla2/Cin      
+    0:01:15   52419.9      0.38       8.7      11.6 ex/alu/B<9>              
+    0:01:15   52450.4      0.44      10.3      11.5 ex/alu/cla/cla1/net32446 
+    0:01:15   52487.9      0.54      12.7      11.5 ex/add2/cla0/net31948    
+    0:01:15   52523.6      0.56      13.4      11.5 ex/add1/cla1/B<0>        
+    0:01:16   52548.0      0.64      14.9      11.4 ex/alu/cla/cla1/net32458 
+    0:01:16   52607.1      0.70      16.8      11.4 ex/B_ctrl/net32657       
+    0:01:16   52627.3      0.70      16.9      11.3 ex/alu/U4/net32310       
+    0:01:16   52670.9      0.74      18.9      11.3 ex/B_ctrl/net32660       
+    0:01:17   52685.0      0.74      20.5      11.3 ex/add1/cla2/net32016    
+    0:01:17   52765.3      0.82      23.1      11.3 ex/alu/shift/n31         
+    0:01:18   52774.7      0.82      23.1      11.3 ex/alu/mux1/m0/m3/mux1/Out
+    0:01:18   52903.7      0.82      25.1      11.2 ex_mem_ff/ff1/mux[7]/w1  
+    0:01:19   52976.0      0.88      25.9      11.2 net32961                 
+    0:01:20   52978.3      0.88      25.9      11.2 ex/add1/cla2/net32022    
+    0:01:20   53048.3      0.88      25.9      11.2 ex/alu/cla/cla0/fa0/n3   
+    0:01:20   53122.9      0.88      25.9      11.1 ex/alu/shift/shftl/n31   
+    0:01:20   53142.6      0.86      25.7      11.1 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:20   53144.0      0.84      25.4      11.1 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:21   53144.5      0.83      25.2      11.1 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:21   53144.0      0.81      25.0      11.1 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:01:21   53142.6      0.80      24.7      11.1 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:21   53138.8      0.76      24.1      11.1 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:21   53140.7      0.76      24.0      11.1 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:21   53141.2      0.74      23.6      11.1 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:21   53135.6      0.73      23.5      11.1 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:21   53134.6      0.73      23.5      11.1 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:21   53131.3      0.72      23.3      11.1 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:21   53133.7      0.72      23.3      11.1 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:21   53143.1      0.72      23.3      11.1 id/control/net32770      
+    0:01:21   53150.6      0.72      23.3      11.1 id/control/net32818      
+    0:01:22   53155.3      0.74      23.8      11.1 ex/bctl/net32133         
+    0:01:22   53157.6      0.74      23.8      11.1 ex/add1/cla2/net42352    
+    0:01:25   53160.0      0.74      23.8      11.1 ex/alu/U4/net32331       
+    0:01:26   53198.9      0.74      23.9      11.0 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:26   53203.1      0.74      23.9      11.0 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:26   53204.5      0.73      23.7      11.0 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:26   53210.2      0.71      23.3      11.0 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:26   53216.7      0.70      23.2      11.0 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:26   53216.3      0.70      23.1      11.0 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:01:26   53217.7      0.70      23.0      11.0 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:01:26   53229.4      0.69      22.9      11.0 ex_mem_ff/ff1/ffs[13]/state_reg/D
+    0:01:26   53231.3      0.68      22.9      11.0 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:26   53229.9      0.68      22.9      11.0 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:26   53227.1      0.68      22.9      11.0 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:26   53232.2      0.68      22.9      11.0 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:26   53235.0      0.68      22.9      11.0 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:27   53239.3      0.68      22.9      11.0                          
+    0:01:27   53239.3      0.68      22.9      11.0                          
+    0:01:27   53239.3      0.68      22.9      11.0                          
+    0:01:27   53239.3      0.68      22.9      11.0                          
+    0:01:27   53235.5      0.68      22.8      11.0                          
+    0:01:27   53236.5      0.68      22.8      11.0                          
+    0:01:27   53239.3      0.68      22.8      11.0                          
+    0:01:27   53242.1      0.68      22.7      11.0                          
+    0:01:27   53248.7      0.68      22.2      11.0                          
+    0:01:27   53250.5      0.68      21.8      11.0                          
+    0:01:27   53254.3      0.68      21.6      11.0                          
+    0:01:27   53258.5      0.68      23.7      11.0                          
+    0:01:27   53252.9      0.68      22.2      11.0                          
+    0:01:27   53248.7      0.68      21.3      11.0                          
+    0:01:27   53251.5      0.68      21.0      11.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:27   53251.5      0.68      21.0      11.0                          
+    0:01:27   53251.5      0.68      21.0      11.0                          
+    0:01:29   49823.7      0.68      20.2      11.0                          
+    0:01:30   49027.3      0.68      19.9      11.0                          
+    0:01:30   48570.2      0.68      19.9      11.0                          
+    0:01:30   48495.1      0.68      19.9      11.0                          
+    0:01:30   48435.0      0.68      19.9      11.0                          
+    0:01:30   48375.9      0.68      19.9      11.0                          
+    0:01:30   48319.6      0.68      19.9      11.0                          
+    0:01:30   48319.6      0.68      19.9      11.0                          
+    0:01:30   48319.6      0.68      19.9      11.0                          
+    0:01:31   48191.9      0.68      19.9      11.0                          
+    0:01:31   48185.8      0.68      19.9      11.0                          
+    0:01:31   48183.5      0.68      19.9      11.0                          
+    0:01:31   48183.5      0.68      19.9      11.0                          
+    0:01:31   48183.5      0.68      19.9      11.0                          
+    0:01:31   48183.5      0.68      19.9      11.0                          
+    0:01:31   48183.5      0.68      19.9      11.0                          
+    0:01:31   48183.5      0.68      19.9      11.0                          
+    0:01:31   48182.6      0.68      19.9      11.0                          
+    0:01:31   48170.8      0.68      19.9      11.0                          
+    0:01:31   48159.6      0.68      19.9      11.0                          
+    0:01:31   48145.5      0.69      20.1      10.9                          
+    0:01:31   48138.4      0.69      20.2      10.9                          
+    0:01:31   48118.3      0.69      20.2      10.9                          
+    0:01:31   48098.1      0.69      20.3      10.9                          
+    0:01:31   48089.6      0.68      20.2      10.9                          
+    0:01:32   48091.0      0.68      20.1      10.9                          
+    0:01:32   48089.6      0.68      20.1      10.9                          
+    0:01:32   48093.9      0.68      20.1      10.9                          
+    0:01:32   48096.7      0.68      20.1      10.9                          
+    0:01:32   48096.7      0.68      20.1      10.9 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:32   48096.7      0.68      20.1      10.9 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:32   48103.2      0.67      20.0      10.9 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:32   48105.6      0.67      20.0      10.9 ex_mem_ff/ff1/ffs[12]/state_reg/D
+    0:01:32   48107.5      0.67      20.0      10.9 ex_mem_ff/ff1/ffs[12]/state_reg/D
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'proc' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'ft/pc_reg/ff0[1]/clk': 1436 load(s), 1 driver(s)
+     Net 'ft/cla/cla0/fa2/B': 1106 load(s), 1 driver(s)
+1
+check_design -summary
+ 
+****************************************
+check_design summary:
+Version:     Q-2019.12-SP3
+Date:        Mon Nov 23 08:11:32 2020
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     49
+    Unconnected ports (LINT-28)                                    24
+    Constant outputs (LINT-52)                                     25
+
+Cells                                                             141
+    Connected to power or ground (LINT-32)                        115
+    Nets connected to multiple pins on same cell (LINT-33)         26
+--------------------------------------------------------------------------------
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-98)
+
+1
+set filename [format "%s%s"  $my_toplevel ".syn.v"]
+proc.syn.v
+write -hierarchy -f verilog $my_toplevel -output synth/$filename
+Writing verilog file '/afs/cs.wisc.edu/u/z/l/zlabek-schuebel/private/ece552/project/demo2/verilog/synth/proc.syn.v'.
+Warning: Bus naming style currently specified as %s<%d>, verilog syntax requires bus naming style to be "[]".  (VO-13)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_328. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_329. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_330. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_331. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_332. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_333. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_334. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_335. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_336. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_337. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_338. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_339. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_340. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_341. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_342. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_343. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_312. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_313. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_314. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_315. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_316. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_317. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_318. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_319. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_320. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_321. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_322. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_323. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_324. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_325. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_326. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_327. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_569. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_570. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_571. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_572. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_573. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_574. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_575. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_311. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_310. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_309. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_308. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_307. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_306. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_305. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_304. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_303. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_302. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_301. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_300. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_299. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_298. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_297. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_296. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_295. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_294. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_293. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_292. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_291. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_290. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_289. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_288. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_287. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_286. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_285. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_284. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_283. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_282. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_281. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_280. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_279. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_278. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_277. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_276. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_275. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_274. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_273. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_272. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_271. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_270. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_269. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_268. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_267. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_266. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_265. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_264. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_263. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_262. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_261. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_260. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_259. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_258. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_257. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_256. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_255. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_254. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_253. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_252. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_251. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_250. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_249. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_248. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_247. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_246. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_245. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_244. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_243. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_242. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_241. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_240. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_239. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_238. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_237. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_236. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_235. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_234. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_233. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_232. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_231. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_230. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_229. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_228. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_227. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_226. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_225. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_224. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_223. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_222. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_221. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_220. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_219. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_218. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_217. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_216. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_215. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_214. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_213. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_212. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_211. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_210. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_209. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_208. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_207. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_206. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_205. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_204. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_203. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_202. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_201. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_200. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_199. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_198. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_197. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_196. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_195. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_194. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_193. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_192. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_191. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_190. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_189. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_188. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_187. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_186. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_185. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_184. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_532. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_533. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_534. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_535. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_536. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_505. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_506. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_507. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_508. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_509. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_510. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_511. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_512. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_513. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_514. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_515. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_516. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_517. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_518. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_519. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_520. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_179. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_180. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_173. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_504. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_500. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_498. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_127. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_124. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_121. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_112. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_109. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_103. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_100. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_167. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_164. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_145. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_146. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_147. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_148. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_149. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_150. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_151. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_152. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_153. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_157. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_158. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_159. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Verilog writer has added 20 nets to module execute using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_482. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_483. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_484. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_485. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_486. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_487. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_488. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_489. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_490. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_491. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_492. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_493. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_494. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_495. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_496. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_497. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_466. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_467. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_468. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_469. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_470. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_471. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_472. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_473. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_474. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_475. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_476. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_477. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_478. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_479. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_480. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_481. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_450. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_451. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_452. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_453. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_454. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_455. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_456. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_457. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_434. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_435. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_436. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_437. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_438. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_439. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_440. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_441. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_442. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_443. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_444. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_445. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_446. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_447. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_448. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_449. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_429. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_430. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_425. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_424. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_423. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_421. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_420. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_404. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_405. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_406. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_407. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_408. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_409. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_410. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_411. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_412. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_413. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_414. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_415. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_416. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_417. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_418. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_419. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_388. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_389. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_390. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_391. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_392. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_393. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_394. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_395. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_396. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_397. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_398. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_399. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_400. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_401. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_402. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_403. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_372. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_373. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_374. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_375. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_376. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_377. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_378. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_379. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_380. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_381. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_382. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_383. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_384. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_385. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_386. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_387. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_356. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_357. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_358. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_359. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_360. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_361. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_362. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_363. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_364. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_365. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_366. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_367. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_368. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_369. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_370. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_371. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_351. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_350. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_349. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_344. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_345. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_96. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_95. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_93. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_92. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_90. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_89. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_87. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_86. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_84. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_83. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_81. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_80. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_78. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_77. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_75. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_74. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_72. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_71. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_69. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_68. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_66. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_65. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_63. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_62. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_60. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_59. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_57. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_56. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_54. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_53. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_51. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Changed instance name n1 to n1_inst in module mux2_1_50. Please use the change_names command to make the correct changes before invoking the verilog writer.   (VO-1)
+Warning: Verilog writer has added 2 nets to module proc using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+set filename [format "%s%s"  $my_toplevel ".ddc"]
+proc.ddc
+write -hierarchy -format ddc -output synth/$filename
+Writing ddc file 'synth/proc.ddc'.
+1
+report_hierarchy > synth/hierarchy.txt
+report_reference > synth/reference_report.txt
+report_area > synth/area_report.txt
+report_cell > synth/cell_report.txt
+report_timing -max_paths 20 > synth/timing_report.txt
+report_power > synth/power_report.txt
+quit
+
+Memory usage for this session 173 Mbytes.
+Memory usage for this session including child processes 173 Mbytes.
+CPU usage for this session 95 seconds ( 0.03 hours ).
+Elapsed time for this session 97 seconds ( 0.03 hours ).
+
+Thank you...
