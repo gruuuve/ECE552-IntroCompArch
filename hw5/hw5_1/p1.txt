@@ -1,0 +1,3 @@
+// Write your answer to Problem 2 (b) here
+
+The forwarding path is utilized when the two lbi instructions before the add instruction are not done before the add instruction would be processed, introducing a data hazard. Instead the forwarding paths from write back and memory are both used to pass r1 and r0 back to be added without any hazards.

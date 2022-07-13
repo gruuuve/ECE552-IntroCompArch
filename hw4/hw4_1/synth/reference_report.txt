@@ -1,0 +1,40 @@
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : reference
+Design : fifo
+Version: Q-2019.12-SP3
+Date   : Tue Nov 10 07:40:27 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFX2              gscl45nm       2.346500       2      4.693000  
+INVX1              gscl45nm       1.407900       5      7.039500  
+NAND3X1            gscl45nm       2.346500       2      4.693000  
+XNOR2X1            gscl45nm       4.693000       3     14.079000  
+d_out                           874.305887       1    874.305887  h
+dff_262                          13.140400       1     13.140400  h, n
+rd_ptr                           78.373098       1     78.373098  h
+reg_16_N_Bits3_0                 61.947599       1     61.947599  h, n
+reg_16_N_Bits3_1                 61.947599       1     61.947599  h, n
+reg_16_N_Bits64_0              1319.671572       1   1319.671572  h, n
+reg_16_N_Bits64_1              1321.079472       1   1321.079472  h, n
+reg_16_N_Bits64_2              1319.671572       1   1319.671572  h, n
+reg_16_N_Bits64_3              1319.671572       1   1319.671572  h, n
+wr_enable                        23.464999       1     23.464999  h
+wr_ptr                           78.373098       1     78.373098  h
+-----------------------------------------------------------------------------
+Total 15 references                                  6502.151368
+1

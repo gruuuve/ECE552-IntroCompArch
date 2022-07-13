@@ -1,0 +1,8 @@
+dff.v
+d_out.v
+fifo.v
+fulladder.v
+rd_ptr.v
+reg_16.v
+wr_enable.v
+wr_ptr.v
