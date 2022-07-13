@@ -1,0 +1,58 @@
+ 
+****************************************
+Report : cell
+Design : proc
+Version: Q-2019.12-SP3
+Date   : Mon Nov 23 08:11:35 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U10                       BUFX2           gscl45nm        2.346500  
+U11                       OR2X2           gscl45nm        2.815800  
+U12                       INVX1           gscl45nm        1.407900  
+U13                       BUFX2           gscl45nm        2.346500  
+U14                       OR2X2           gscl45nm        2.815800  
+U15                       BUFX2           gscl45nm        2.346500  
+U16                       BUFX2           gscl45nm        2.346500  
+U17                       OR2X2           gscl45nm        2.815800  
+U18                       INVX1           gscl45nm        1.407900  
+U19                       INVX1           gscl45nm        1.407900  
+U20                       INVX1           gscl45nm        1.407900  
+U21                       INVX1           gscl45nm        1.407900  
+U22                       INVX1           gscl45nm        1.407900  
+U23                       NOR3X1          gscl45nm        2.815800  
+U24                       NOR2X1          gscl45nm        2.346500  
+U25                       NAND2X1         gscl45nm        1.877200  
+U26                       NOR3X1          gscl45nm        2.815800  
+U27                       NAND3X1         gscl45nm        2.346500  
+ex                        execute                         7778.647353
+                                                                    h
+ex_mem_ff                 ex_mem_mod                      1892.217563
+                                                                    h, n
+ft                        fetch                           15342.355313
+                                                                    h, n
+hd                        hazard_det                      160.031296
+                                                                    h
+id                        decode                          4671.881436
+                                                                    h, n
+id_ex_ff                  id_ex_mod                       1986.077561
+                                                                    h, n
+if_id_ff                  if_id_mod                       767.774785
+                                                                    h, n
+mem                       memory                          13077.513575
+                                                                    h, n
+mem_wb_ff                 mem_wb_mod                      1778.646966
+                                                                    h, n
+wr_b                      writeBack                       613.844389
+                                                                    h
+--------------------------------------------------------------------------------
+Total 28 cells                                            48107.472836
+1
