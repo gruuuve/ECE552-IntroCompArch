@@ -1,0 +1,51 @@
+Information: Updating graph... (UID-83)
+Warning: Design 'mem_system' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : reference
+Design : mem_system
+Version: Q-2019.12-SP3
+Date   : Mon Dec 14 01:13:15 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             gscl45nm       2.346500      14     32.850999  
+AND2X2             gscl45nm       2.815800      30     84.473999  
+AOI21X1            gscl45nm       2.815800       3      8.447400  
+AOI22X1            gscl45nm       3.285100      28     91.982800  
+BUFX2              gscl45nm       2.346500      25     58.662498  
+BUFX4              gscl45nm       2.815800       1      2.815800  
+INVX1              gscl45nm       1.407900     148    208.369196  
+INVX2              gscl45nm       1.877200       3      5.631600  
+INVX4              gscl45nm       3.285100       3      9.855300  
+MUX2X1             gscl45nm       3.754400       2      7.508800  
+NAND2X1            gscl45nm       1.877200       7     13.140400  
+NAND3X1            gscl45nm       2.346500      20     46.929998  
+NOR2X1             gscl45nm       2.346500       4      9.386000  
+NOR3X1             gscl45nm       2.815800       6     16.894800  
+OAI21X1            gscl45nm       2.815800      12     33.789599  
+OR2X1              gscl45nm       2.346500       9     21.118499  
+OR2X2              gscl45nm       2.815800       7     19.710600  
+XNOR2X1            gscl45nm       4.693000       3     14.079000  
+cache_cache_id0               46904.187691       1  46904.187691  h, n
+dff_216                          11.732500       1     11.732500  h, n
+dff_217                          11.732500       1     11.732500  h, n
+dff_218                          11.732500       1     11.732500  h, n
+dff_219                          11.732500       1     11.732500  h, n
+dff_220                          11.732500       1     11.732500  h, n
+four_bank_mem                 22494.487188       1  22494.487188  h, n
+-----------------------------------------------------------------------------
+Total 25 references                                 70142.984664
+1
