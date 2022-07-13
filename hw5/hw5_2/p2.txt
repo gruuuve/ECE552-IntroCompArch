@@ -1,0 +1,4 @@
+// Write your answer to Problem 2 (b) and (c) here
+b) This test observes a processor that predicts branch not taken and it's drawbacks. The first beqz instruction on r0 should be taken, but based on the prediction the processor will continue onto the lbi then slt instructions. These wasted cycles could have been used for actual data and avoided any data corruption or write overs. In the second beqz instruction however, the branch not taken prediciton comes in use as the test ends without running any extra cycles after the halt.
+
+c) Yes, branch prediciton will only take one cycle. If prediction took any more than one cycle, it would no longer offer a significant benefit by instead introducing extra delay. Missing a branch means a large cycle cost and lower efficiency, both of which are negative qualities to add to any processor.
